@@ -14,8 +14,9 @@ services:
       USE_WEB: "true"
 
       WEB_USERNAME: "admin"
-      WEB_PASSWORD: ""
+      WEB_PASSWORD: "123456"
       WEB_SECRET: ""
+      DATABASE: "postgresql://okteto:okteto@localhost:5432/okteto"
 
 
       PUSH_TIMEOUT: 30
