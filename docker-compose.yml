@@ -33,7 +33,7 @@ services:
     ports:
       - "35601:35601"
   db:
-    image: postgresql
+    image: bitnami/postgresql
     restart: always
     environment:
       POSTGRESQL_USERNAME: okteto
