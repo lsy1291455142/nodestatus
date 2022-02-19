@@ -36,8 +36,11 @@ services:
     image: bitnami/postgresql
     restart: always
     environment:
+      PORT: 5432
       POSTGRESQL_USERNAME: "okteto"
       POSTGRESQL_PASSWORD: "okteto"
       POSTGRESQL_DATABASE: "okteto"
     volumes:
       - /postgresql:/bitnami/postgresql
+    ports:
+      - "5432:5432"
