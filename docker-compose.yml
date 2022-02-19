@@ -16,7 +16,7 @@ services:
       WEB_USERNAME: "admin"
       WEB_PASSWORD: "123456"
       WEB_SECRET: ""
-      DATABASE: "postgresql://okteto:okteto@postgresql-liusyeuorg.cloud.okteto.net:5432/okteto"
+      DATABASE: "postgresql://okteto:okteto@127.0.0.1:5432/okteto"
 
 
       PUSH_TIMEOUT: 30
@@ -32,4 +32,12 @@ services:
 
     ports:
       - "35601:35601"
-
+  db:
+    image: postgresql
+    restart: always
+    environment:
+      POSTGRESQL_USERNAME: okteto
+      POSTGRESQL_PASSWORD: okteto
+      POSTGRESQL_DATABASE: okteto
+    volumes:
+      - /postgresql:/bitnami/postgresql
