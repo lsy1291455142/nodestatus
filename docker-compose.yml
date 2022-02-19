@@ -36,8 +36,8 @@ services:
     image: bitnami/postgresql
     restart: always
     environment:
-      POSTGRESQL_USERNAME: okteto
-      POSTGRESQL_PASSWORD: okteto
-      POSTGRESQL_DATABASE: okteto
+      POSTGRESQL_USERNAME: "okteto"
+      POSTGRESQL_PASSWORD: "okteto"
+      POSTGRESQL_DATABASE: "okteto"
     volumes:
       - /postgresql:/bitnami/postgresql
